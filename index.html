@@ -13,8 +13,9 @@
     <div id="app">
         <ul>
             <dude
-                v-for="dude in characters"
+                v-for="(dude, index) in characters"
                 title="hello, my good dude"
+                :key="index"
                 :name="dude"
             ></dude>
         </ul>

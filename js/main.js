@@ -1,24 +1,10 @@
-Vue.component('dude',{
-    props:[
-        'title', 'name'
-    ],
-    template: `
-        <li :title="title">
-            <article>
-                {{ name }}
-                <span>{{ title }}</span>
-            </article>
-        </li>
-    `,
-    data() {
-        return {
-
-        }
-    }
-})
+import Dude from './components/Dude.vue';
 
 const app = new Vue({
     el: '#app',
+    components: {
+        Dude
+    },
     data: {
         newDude: '',
         characters: [
