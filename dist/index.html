@@ -7,24 +7,19 @@
     <link rel="stylesheet" href="/bootstrap.min.108cc16f.css">
     <link rel="stylesheet" href="/main.c52e0fe2.css">
     <title>Vue me</title>
-<script src="/bootstrap.min.108cc16f.js"></script><script src="/main.c52e0fe2.js"></script></head>
+<script src="/bootstrap.min.108cc16f.js"></script><script src="/main.c52e0fe2.js"></script><link rel="stylesheet" href="/main.fb6bbcaf.css"></head>
 <body>
     
     <div id="app">
         <ul>
-            <dude v-for="(dude, index) in characters" title="hello, my good dude" :key="index" :name="dude"></dude>
+            <dude v-for="(dude, index) in characters" title="hello, my good dude" :key="index + 1" :name="dude"></dude>
         </ul>
-        <form class="add-new" @submit.prevent="characters.push(newDude)">
-            <input type="text" v-model="newDude">
-        </form>
 
-        <p class="preview">
-            {{ newDude }}
-        </p>
-    </div>
+        
+        <create-dude-form @add-dude="characters.push($event)"></create-dude-form>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="/main.fb6bbcaf.js"></script>
     
-</body>
+</div></body>
 </html>

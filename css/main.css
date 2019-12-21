@@ -103,41 +103,6 @@ li:nth-child(5n+3) article { background: #e64134 ; }
 li:nth-child(5n+2) article { background: #eb70b1; }
 li:nth-child(5n+5) article { background: #0f1a5f; }
 
-.add-new {
-    max-width: 320px;
-    margin: 3em auto 3em
-}
-
-.add-new input {
-    font-size: 14px;
-    color: #fff;
-    background: none;
-    border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, .9);
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 0.5em;
-}
-
-.add-new input:focus {
-    outline: none;
-}
-
-.add-new input:first-child {
-    font-weight: bold;
-}
-
-.add-new input:last-child{
-    font-size: 13px;
-    width: 100%;
-}
-
-.preview {
-    font-size: 13px;
-    opacity: .5;
-}
-
 @media ( max-width: 860px) {
 
     article {

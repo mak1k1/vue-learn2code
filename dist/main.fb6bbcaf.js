@@ -8963,20 +8963,148 @@ render._withStripped = true
       
       }
     })();
+},{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/components/CreateDudeForm.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      newDude: ''
+    };
+  },
+  methods: {
+    addNewDude: function addNewDude() {
+      this.$emit('add-dude', this.newDude);
+      this.$refs.input.value = '';
+      this.$refs.input.focus();
+      this.newDude = '';
+    }
+  }
+};
+exports.default = _default;
+        var $257c73 = exports.default || module.exports;
+      
+      if (typeof $257c73 === 'function') {
+        $257c73 = $257c73.options;
+      }
+    
+        /* template */
+        Object.assign($257c73, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("aside", [
+    _c(
+      "form",
+      {
+        staticClass: "add-new",
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.addNewDude($event)
+          }
+        }
+      },
+      [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.newDude,
+              expression: "newDude"
+            }
+          ],
+          ref: "input",
+          attrs: { type: "text" },
+          domProps: { value: _vm.newDude },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.newDude = $event.target.value
+            }
+          }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c("p", { staticClass: "preview" }, [
+      _vm._v("\n        " + _vm._s(_vm.newDude) + "\n    ")
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-257c73",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$257c73', $257c73);
+          } else {
+            api.reload('$257c73', $257c73);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
 },{"_css_loader":"../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 var _Dude = _interopRequireDefault(require("./components/Dude.vue"));
+
+var _CreateDudeForm = _interopRequireDefault(require("./components/CreateDudeForm.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = new Vue({
   el: '#app',
   components: {
-    Dude: _Dude.default
+    Dude: _Dude.default,
+    CreateDudeForm: _CreateDudeForm.default
   },
   data: {
-    newDude: '',
     characters: ['Jake the Dog', 'Finn the Human', 'Marcelline the Vampire']
   },
   methods: {
@@ -8991,7 +9119,7 @@ var app = new Vue({
     }
   }
 });
-},{"./components/Dude.vue":"js/components/Dude.vue"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/Dude.vue":"js/components/Dude.vue","./components/CreateDudeForm.vue":"js/components/CreateDudeForm.vue"}],"../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

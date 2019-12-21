@@ -15,17 +15,15 @@
             <dude
                 v-for="(dude, index) in characters"
                 title="hello, my good dude"
-                :key="index"
+                :key="index + 1"
                 :name="dude"
             ></dude>
         </ul>
-        <form class="add-new" @submit.prevent="characters.push(newDude)">
-            <input type="text" v-model="newDude">
-        </form>
 
-        <p class="preview">
-            {{ newDude }}
-        </p>
+        
+        <create-dude-form
+            @add-dude="characters.push($event)"
+        ></create-dude-form
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

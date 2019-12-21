@@ -1,12 +1,15 @@
 import Dude from './components/Dude.vue';
+import CreateDudeForm from './components/CreateDudeForm.vue';
+
+
 
 const app = new Vue({
     el: '#app',
     components: {
-        Dude
+        Dude, 
+        CreateDudeForm
     },
     data: {
-        newDude: '',
         characters: [
             'Jake the Dog',
             'Finn the Human',
